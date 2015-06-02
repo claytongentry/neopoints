@@ -5,29 +5,29 @@
 
 <div id = "neos">
     <form role = "form" id = "points">
-      <label><input type = "checkbox" name = "Greg" value = "Greg">Greg</label>
-      <label><input type = "checkbox" name = "Kendall" value = "Kendall">Kendall</label>
-      <label><input type = "checkbox" name = "Kurt" value = "Kurt">Kurt</label>
-      <label><input type = "checkbox" name = "Bilal" value = "Bilal">Bilal</label>
-      <label><input type = "checkbox" name = "Taylor B." value = "Taylor B.">Taylor B.</label>
-      <label><input type = "checkbox" name = "Victoria" value = "Victoria">Victoria</label>
-      <label><input type = "checkbox" name = "Tif" value = "Tif">Tif</label>
-      <label><input type = "checkbox" name = "Jacob" value = "Jacob">Jacob</label>
-      <label><input type = "checkbox" name = "Taylor F." value = "Taylor F.">Taylor F.</label>
-      <label><input type = "checkbox" name = "Kate" value = "Kate">Kate</label>
-      <label><input type = "checkbox" name = "Rachel" value = "Rachel">Rachel</label>
-      <label><input type = "checkbox" name = "Emma" value = "Emma">Emma</label>
-      <label><input type = "checkbox" name = "Hannah" value = "Hannah">Hannah</label>
-      <label><input type = "checkbox" name = "Candice" value = "Candice">Candice</label>
-      <label><input type = "checkbox" name = "Brenda" value = "Brenda">Brenda</label>
-      <label><input type = "checkbox" name = "Ida" value = "Ida">Ida</label>
-      <label><input type = "checkbox" name = "Trevor" value = "Trevor">Trevor</label>
-      <label><input type = "checkbox" name = "Nick" value = "Nick">Nick</label>
-      <label><input type = "checkbox" name = "Dan" value = "Dan">Dan</label>
-      <label><input type = "checkbox" name = "Lily" value = "Lily">Lily</label>
-      <label><input type = "checkbox" name = "Kirsten" value = "Kirsten">Kirsten</label>
-      <label><input type = "checkbox" name = "Leah" value = "Leah">Leah</label>
-      <label><input type = "checkbox" name = "Malic" value = "Malic">Malic</label>
+      <label><input type = "checkbox" name = "Greg" data-years = "27">Greg</label>
+      <label><input type = "checkbox" name = "Kendall" data-years = "1">Kendall</label>
+      <label><input type = "checkbox" name = "Kurt" data-years = "7">Kurt</label>
+      <label><input type = "checkbox" name = "Bilal" data-years = "11">Bilal</label>
+      <label><input type = "checkbox" name = "Taylor B." data-years = "3">Taylor B.</label>
+      <label><input type = "checkbox" name = "Victoria" data-years = "2">Victoria</label>
+      <label><input type = "checkbox" name = "Tif" data-years = "4">Tif</label>
+      <label><input type = "checkbox" name = "Jacob" data-years = "2">Jacob</label>
+      <label><input type = "checkbox" name = "Taylor F." data-years = "4">Taylor F.</label>
+      <label><input type = "checkbox" name = "Kate" data-years = "2">Kate</label>
+      <label><input type = "checkbox" name = "Rachel" data-years = "3">Rachel</label>
+      <label><input type = "checkbox" name = "Emma" data-years = "1">Emma</label>
+      <label><input type = "checkbox" name = "Hannah" data-years = "2">Hannah</label>
+      <label><input type = "checkbox" name = "Candice" data-years = "6">Candice</label>
+      <label><input type = "checkbox" name = "Brenda" data-years = "4">Brenda</label>
+      <label><input type = "checkbox" name = "Ida" data-years = "1">Ida</label>
+      <label><input type = "checkbox" name = "Trevor" data-years = "4">Trevor</label>
+      <label><input type = "checkbox" name = "Nick" data-years = "1">Nick</label>
+      <label><input type = "checkbox" name = "Dan" data-years = "3">Dan</label>
+      <label><input type = "checkbox" name = "Lily" data-years = "3">Lily</label>
+      <label><input type = "checkbox" name = "Kirsten" data-years = "3">Kirsten</label>
+      <label><input type = "checkbox" name = "Leah" data-years = "4">Leah</label>
+      <label><input type = "checkbox" name = "Malic" data-years = "3">Malic</label>
       <input type = "submit" value = "Vote" onclick = "squarify()"
     </form>
 </div>
@@ -49,8 +49,10 @@ function squarify() {
 function loop_form(form) {
   var count = 0;
   for (var i = 0, len = form.elements.length; i < len; i++) {
+
     if (form.elements[i].checked == true) {
-      count += 0.1;
+      var data = form.elements[i].dataset;
+      count += data.years / 100;
       console.log("Count: " + count);
     }
   }
@@ -66,8 +68,6 @@ var square = new ProgressBar.Square('#voting_box', {
 });
 
 function show_square(height) {
-
-
 
     square.animate(height);
 
