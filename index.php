@@ -52,10 +52,16 @@ function loop_form(form) {
 
     if (form.elements[i].checked == true) {
       var data = form.elements[i].dataset;
-      count += data.years / 100;
+      count += data.years / 100 + 0.01;
       console.log("Count: " + count);
     }
   }
+
+  // Can't get more than 100%;
+  if (count > 1) {
+    count = 1;
+  }
+
   return count;
 }
 
