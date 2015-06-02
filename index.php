@@ -28,7 +28,7 @@
       <label><input type = "checkbox" name = "Kirsten" data-years = "3">Kirsten</label>
       <label><input type = "checkbox" name = "Leah" data-years = "4">Leah</label>
       <label><input type = "checkbox" name = "Malic" data-years = "3">Malic</label>
-      <input type = "submit" value = "Vote" onclick = "squarify()"
+      <input id = "vote_btn" type = "submit" value = "Vote" onclick = "squarify()"
     </form>
 </div>
 <div id = "voting_box"></div>
