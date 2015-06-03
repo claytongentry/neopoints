@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <?php require('templates/header.php'); ?>
 
-<h1>NeoPoints</h1>
-
 <div id = "neos">
     <form role = "form" id = "points">
       <label><input type = "checkbox" name = "Greg" data-years = "27">Greg</label>
@@ -31,7 +29,8 @@
       <input id = "vote_btn" type = "submit" value = "Vote" onclick = "squarify()"
     </form>
 </div>
-<div id = "voting_box"></div>
+<div id = "voting_box"><h1>NeoPoints</h1>
+</div>
 
 
 <script src = "progressbar.min.js"></script>
