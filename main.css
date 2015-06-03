@@ -46,6 +46,7 @@ h1 {
   margin-bottom: 20px;
   text-align: center;
   font-family: American Typewriter, sans-serif;
+	font-size: 64px;
 }
 
 
@@ -98,6 +99,6 @@ input {
     width: 500px;
     height: 500px;
     margin-top: 100px;
-    margin-left: 35%;
+    margin-left: 33%;
     margin-right: auto;
 }
