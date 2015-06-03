@@ -29,7 +29,7 @@
       <input id = "vote_btn" type = "submit" value = "Vote" onclick = "squarify()"
     </form>
 </div>
-<div id = "voting_box"><h1>NeoPoints</h1>
+<div id = "voting_box"><h1>NeoVotes</h1>
 </div>
 
 
