@@ -68,7 +68,7 @@ var square = new ProgressBar.Square('#voting_box', {
     width: "150px",
     color: 'red',
     strokeWidth: 5,
-    duration: 2000,
+    duration: 1000,
     easing: 'easeInOut'
 });
 
